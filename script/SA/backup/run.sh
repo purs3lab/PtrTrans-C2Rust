@@ -24,7 +24,7 @@ if [ $# -lt 1 ] || [ $# -gt 2 ]; then
     show_usage
 fi
 
-PROJECT_DIR="../Code_Package"  
+PROJECT_DIR="$(realpath ../Code_Package)"
 SOURCE_DIR="$1"                          
 LLVM_VERSION="14"                         # LLVM version
 SVF_ROOT="$PROJECT_DIR/dependencyLib/SVF-SVF-2.9" 

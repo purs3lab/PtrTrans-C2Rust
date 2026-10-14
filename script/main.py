@@ -1755,6 +1755,8 @@ if __name__ == '__main__':
 
     project_list = ['crown_dataset/avl','crown_dataset/buffer','crown_dataset/genann','crown_dataset/quadtree', 'crown_dataset/rgba',
                     'crown_dataset/urlparser','crown_dataset/ht','crown_dataset/bst','crown_dataset/json_h','crown_dataset/libtree']
+    if args.source_project_name:
+        project_list = [os.path.join('crown_dataset', args.source_project_name)]
     for project_name in project_list:
         print("Deal: ", project_name)
         args.source_project_path = os.path.join(args.root_dir, "dataset", project_name)

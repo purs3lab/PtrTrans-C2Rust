@@ -38,9 +38,8 @@ class Generator:
         
         if "gpt" in self.model_name:
             
-            OPENAI_API_KEY = "Set_Your_OpenAI_API_KEY"
-            openai.api_key = OPENAI_API_KEY
-            openai.api_base = "https://openkey.cloud/v1"
+            openai.api_key = os.environ["OPENAI_API_KEY"]
+            openai.api_base = os.environ["OPENAI_BASE_URL"]
 
         else:
             self.model_name_or_path = args.model_path

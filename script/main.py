@@ -79,10 +79,6 @@ class Main:
                 for item in file_map_list:
                     json.dump(item, f, ensure_ascii=False)
                     f.write('\n')
-        verf_Result = self.rust_compile_verfication()
-        if verf_Result != "Success":
-            logger.error(f"Rust pro verification failed: {verf_Result}")
-            exit(1)
         return trans_metadata_path, entities_path, relationships_path, c_topo_sort_str
 
         

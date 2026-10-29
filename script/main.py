@@ -1639,9 +1639,6 @@ edition = "2021"
                 elif name == 'lib.rs':
                     with open(full_path, 'w') as f:
                         f.write('''// This is a placeholder for your Rust library code''')
-                elif name == 'main.rs':
-                    with open(full_path, 'w') as f:
-                        f.write('''fn main() {}\n''')
                 else:
                     if "common" not in full_path and "main.rs" not in full_path:   
                         with open(full_path, 'w') as f:

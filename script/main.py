@@ -1628,6 +1628,7 @@ class Main:
 name = "{project_name}"
 version = "0.1.0"
 edition = "2021"
+autobins = false
 
 [dependencies]
 ''')
